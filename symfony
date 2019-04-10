@@ -9,8 +9,8 @@ Configure web-server
 => composer require symfony/apache-pack		Install Apache recipe
 => /var/www/project/public/					the public directory
 
-
 Run symfony application
 => cd <project-name>						navigate to the project folder
 => php bin/console server:run 				starts the server
+=> Start Server on http://127.0.0.1:8000
 
