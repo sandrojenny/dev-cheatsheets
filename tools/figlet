@@ -1,0 +1,24 @@
+*** figlet Cheatsheet ***
+
+=> npm install -g figlet-cli			Install figlet for the command line
+
+Examples
+=> figlet -f "USA Flag" "Figlet"
+=> figlet -f "Univers" "FIGLET"
+=> figlet -f "Ghost" "Figlet"
+=> figlet -f "Dancing Font" "Figlet"
+
+  -l, --list         		List all the available fonts                         
+  -f, --font           		A string value that indicates the FIGlet font to use      
+  --horizontal-layout  		A string value that indicates the horizontal layout to use
+  --vertical-layout    		A string value that indicates the vertical layout to use  
+  
+
+88888888888  88    ,ad8888ba,   88           88888888888  888888888888  
+88           88   d8"'    `"8b  88           88                88       
+88           88  d8'            88           88                88       
+88aaaaa      88  88             88           88aaaaa           88       
+88"""""      88  88      88888  88           88"""""           88       
+88           88  Y8,        88  88           88                88       
+88           88   Y8a.    .a88  88           88                88       
+88           88    `"Y88888P"   88888888888  88888888888       88 

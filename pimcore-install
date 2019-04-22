@@ -1,0 +1,32 @@
+*** Pimcore Cheatsheet ***
+
+Website: https://pimcore.com/docs/5.x/index.html
+
+# Simple and easy Docker-Compose configuration for Pimcore 5:
+– https://github.com/dpfaffenbauer/pimcore-docker-compose/blob/master/README.md
+
+# Requirements
+– git
+– docker
+– docker-compose
+
+# Installting Pimcore
+– git clone https://github.com/dpfaffenbauer/pimcore-docker-compose.git
+– cd pimcore-docker-compose/
+– docker-compose up (Run Containers)
+
+# Choose which package to install 
+– https://pimcore.com/docs/5.x/Development_Documentation/Getting_Started/Installation.html#page_Choose-a-package-to-install
+
+#Install Pimcore
+– docker exec -it pimcore-php bash (get shell in running container)
+– COMPOSER_MEMORY_LIMIT=-1 composer create-project pimcore/demo-basic-twig tmp mv tmp/* .
+– echo 'memory_limit = 512M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini; 
+– service apache2 reload
+
+#Run Installer
+./vendor/bin/pimcore-install --mysql-host-socket=db --mysql-username=pimcore --mysql-password=pimcore --mysql-database=pimcore
+
+#After the installer is finished, you can open in your Browser:
+– Frontend: http://localhost:2000
+– Backend: http://localhost:2000/admin

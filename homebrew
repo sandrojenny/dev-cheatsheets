@@ -1,0 +1,12 @@
+*** Homebrew Cheatsheet ***
+
+Website: https://brew.sh/
+
+Install Homebrew
+=> /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew install {package}			Install packages
+brew install mysql@5.7
+
+brew edit {package}				Open in editor
+

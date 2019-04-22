@@ -1,0 +1,12 @@
+*** Docker Cheatsheet ***
+
+Website: https://docs.docker.com
+
+# Installing docker
+=> https://docs.docker.com/docker-for-mac/install/
+
+# Commands
+docker images				shows all docker images
+docker pull <image>			downloads a docker image
+docker run <image>			creates a docker images
+
