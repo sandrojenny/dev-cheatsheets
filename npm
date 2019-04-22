@@ -1,9 +1,0 @@
-*** npm Cheatsheet ***
-
-Website: https://www.npmjs.com
-
-npm -v							shows the npm version
-sudo npm install npm@latest -g		install the latest npm version globally
-
-npm install -g <package_name>
-

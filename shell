@@ -1,8 +1,0 @@
-*** Shell Cheatsheet ***
-
-cd				Change directory
-ls				Show the content of a directory
-cd ..			go back
-
-sudo			work as an admin
-- g 			work globally
