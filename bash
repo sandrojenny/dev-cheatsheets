@@ -41,13 +41,22 @@ cat text.txt | more			Show first lines and continue with more command
 head text.txt 				Show only the first 10 lines of the txt-file
 tail text.txt 				Show only the last 10 lines of the txt-file
 
-#work
+#work with files & folders
 mkdir test-folder			Creates the folder «test-folder»
+touch test-document			Creates a new empty txt-file
+
 rmdir test-folder			Deletes the folder «test-folder» (works only with empty folders)
 rmdir -p test-folder		Deletes the folder an its acestors
+rm test-document			Deletes the txt-file
+rm test-document*			Deletes all txt-files 
 rm -r test-folder			Deletes the folder and all its contents recursively
 rm -rf						Deletes the folder and all its contents recursively without asking
 
+mv test-document tests/		Moves the txt-file to a folder
+mv test-document ..			Moves to parent directory
+
+cp test-document tests/		Copy the files to a folder
+cp -r test-folder ..		Copy the folder to the parent directory
 
 #values
 echo "Hello World"			Outputs the string
