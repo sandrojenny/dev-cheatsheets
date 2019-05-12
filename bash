@@ -36,41 +36,56 @@ reset						resets the current session
 exit 						exit current state
 
 #content
-cat text.txt				Show the content of the txt-file
-cat text.txt | more			Show first lines and continue with more command
-head text.txt 				Show only the first 10 lines of the txt-file
-tail text.txt 				Show only the last 10 lines of the txt-file
+cat text.txt						Show the content of the txt-file
+cat text.txt | more					Show first lines and continue with more command
+head text.txt 						Show only the first 10 lines of the txt-file
+tail text.txt 						Show only the last 10 lines of the txt-file
 
 #work with files & folders
-mkdir test-folder			Creates the folder «test-folder»
-touch test-document			Creates a new empty txt-file
+mkdir test-folder					Creates the folder «test-folder»
+touch test-document					Creates a new empty txt-file
 
-rmdir test-folder			Deletes the folder «test-folder» (works only with empty folders)
-rmdir -p test-folder		Deletes the folder an its acestors
-rm test-document			Deletes the txt-file
-rm test-document*			Deletes all txt-files 
-rm -r test-folder			Deletes the folder and all its contents recursively
-rm -rf						Deletes the folder and all its contents recursively without asking
+rmdir test-folder					Deletes the folder «test-folder» (works only with empty folders)
+rmdir -p test-folder				Deletes the folder an its acestors
+rm test-document					Deletes the txt-file
+rm test-document*					Deletes all txt-files 
+rm -r test-folder					Deletes the folder and all its contents recursively
+rm -rf								Deletes the folder and all its contents recursively without asking
 
-mv test-document tests/		Moves the txt-file to a folder
-mv test-document ..			Moves to parent directory
+mv test-document tests/				Moves the txt-file to a folder
+mv test-document ..					Moves to parent directory
+mv test-document2					Moves to a new directory (if the name doesnt exists)
 
-cp test-document tests/		Copy the files to a folder
-cp -r test-folder ..		Copy the folder to the parent directory
+cp test-document tests/				Copy the files to a folder
+cp -r test-folder ..				Copy the folder to the parent directory
+cp -rp 								Copy the folder (contains rights)
+
+nano text.txt 						Edit a file with the nano editor
+Ctrl (Control) + G 					Show all nano functions 
+Ctrl (Control) + O 					Save
+Ctrl (Control) + ... 				Use the nano tools (Save, Replace etc...)
+
+tar -cvf text.txt text2.txt 		Packs files into an archive
+
+#Shell Scripts
+nano helloworld.sh 					Create a new shell script (#!/bin/bash)
+chmod +x helloworld.sh 				Gives the file the permissions to exuecute
+./helloworld.sh 					Executes the script
+sudo mv helloworld.sh /bin 			Moves the script into the /bin folder (let you exuecute the file globally without specifying the path)
 
 #values
-echo "Hello World"			Outputs the string
-echo $HOME					Shows the value of the home varibale
-echo $PATH 					Shows the value of the path variable
-man echo					shows manual of echo command
+echo "Hello World"					Outputs the string
+echo $HOME							Shows the value of the home varibale
+echo $PATH 							Shows the value of the path variable
+man echo							shows manual of echo command
 
 #admin
-sudo						work with admin permissions
-sudo -s 					work permanetly with admin permissions
--g 							work globally
+sudo								work with admin permissions
+sudo -s 							work permanetly with admin permissions
+-g 									work globally
 
 # SSH
-ssh -l <username> <IP>		Connect with bash to linux server
-bash						Starts bash
-sh 							Go back to simple shell
+ssh -l <username> <IP>				Connect with bash to linux server
+bash								Starts bash
+sh 									Go back to simple shell
 
