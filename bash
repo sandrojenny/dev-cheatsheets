@@ -1,5 +1,18 @@
 ### Shell Cheatsheet ###
 
+## Table of Content ##
+=> 1. main commands
+=> 2. helpers
+=> 3. content
+=> 4. work with files + folders
+=> 5. search + update
+=> 6. filter + analyze
+=> 7. shell scripts
+=> 8. values
+=> 9. admin
+=> 10. SSH
+
+#main commands
 ls							Show the content of a directory
 ls /						Show the content of a subdirectory
 ls --						Show all ls functions
@@ -72,10 +85,25 @@ tar cvfz archive.tar.gz test-folder		Packs the test-folder into an zipped archvi
 gzip text.txt 							Zip a single file
 gunzip text.gz							Unzip the Zip-File
 
-du 										show folder an file size in byte
-du -ms 									show folder an file size in mega-byte
-du -ks									show folder an file size in kilo-byte
-du -hs *								show folder an file size of all files (byt, mega-byte, kilo-byte)
+#Search & Update
+du 									show folder an file size in byte
+du -ms 								show folder an file size in mega-byte
+du -ks								show folder an file size in kilo-byte
+du -hs *							show folder an file size of all files (byt, mega-byte, kilo-byte)
+
+locate folder or file 				Search file or folder
+locate -i folder or file 			Search file or folder (ignore case sensitive)
+locate -b '\folder or file' 		Search for exact term
+find /folder folder or file 		Search in specific folder
+find /folder -type d 				Search in for specific folder only for folders
+find /folder -type f 				Search in for specific files only for files
+find /folder -type f -size 100k		Search in for specific files only for files < 100k
+sudo find / 						Search the entire hard disk with admin rights
+sudo find / -atime 2				Search only for files changed in the last 2 days
+sudo updatedb						Update the database		
+
+#Filter & Analyze
+
 
 #Shell Scripts
 nano helloworld.sh 					Create a new shell script (#!/bin/bash)
@@ -94,7 +122,7 @@ sudo								work with admin permissions
 sudo -s 							work permanetly with admin permissions
 -g 									work globally
 
-# SSH
+#SSH
 ssh -l <username> <IP>				Connect with bash to linux server
 bash								Starts bash
 sh 									Go back to simple shell
