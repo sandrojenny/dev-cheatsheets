@@ -31,10 +31,11 @@ cd folder/folder2			Change the directory by folders
 cd "folder test"			if a folder has a whitespace
 cd folder\ test				escaping if a folder has a whitespace (cmd + alt + /)
 
--a 							show all (hidden) files
--l 							show list
--la 						show list with all (hidden) files
--lat 						show list with all (hidden) files by date
+#wildcards
+-a 							Show all (hidden) files
+-l 							Show list
+-la 						Show list with all (hidden) files
+-lat 						Show list with all (hidden) files by date
 -C 							list entries by columns
 -d 							list directory themselves, not their contents
 
@@ -103,6 +104,9 @@ sudo find / -atime 2				Search only for files changed in the last 2 days
 sudo updatedb						Update the database		
 
 #Filter & Analyze
+cd /var/log							Navigate to the logfiles folder
+ls -lat 							Show list with all (hidden) files by date
+cat syslog.1						Show the content of the syslog.1 file
 
 
 #Shell Scripts

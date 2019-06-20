@@ -1,6 +1,6 @@
 ### WebDev Cheatsheet ###
 
-## Table of Content ##
+## Bash Cheatsheet – Table of Content ##
 => 1. main commands
 => 2. helpers
 => 3. content
