@@ -72,6 +72,11 @@ tar cvfz archive.tar.gz test-folder		Packs the test-folder into an zipped archvi
 gzip text.txt 							Zip a single file
 gunzip text.gz							Unzip the Zip-File
 
+du 										show folder an file size in byte
+du -ms 									show folder an file size in mega-byte
+du -ks									show folder an file size in kilo-byte
+du -hs *								show folder an file size of all files (byt, mega-byte, kilo-byte)
+
 #Shell Scripts
 nano helloworld.sh 					Create a new shell script (#!/bin/bash)
 chmod +x helloworld.sh 				Gives the file the permissions to exuecute
