@@ -12,6 +12,7 @@
 => 9. admin
 => 10. SSH + SFTP
 => 11. Ownership and access rights
+=> 12. User and group management
 
 #main commands
 ls							Show the content of a directory
@@ -178,4 +179,24 @@ chmod 444										... read persmissions
 chmod 555 										... read and exuecute persmissions
 chmod 666 										... read and write persmissions
 chmod 666 										... read, write and exuecute persmissions
+
+#User and group management
+sudo 						    admin / root permissions
+suod -s 						work permanetly as root user
+sudo passwd unsername			Change password for a specific user		
+
+su root 						switch user to root (Password must be set first)
+echo $home 						show home directory when loggedin as root
+
+adduser newUsername 			Add a new user
+adduser username group 			Add a user to a group
+adduser usnername root			Add a user to the root group
+deluser username 				Delete a user
+deluser username group 			Remove a user from a group
+addgroup newGroupname			Add a new group
+
+nano /etc/group 				Edit the config file for groupes
+
+
+
 
