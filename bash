@@ -10,7 +10,7 @@
 => 7. shell scripts
 => 8. values
 => 9. admin
-=> 10. SSH
+=> 10. SSH + SFTP
 
 #main commands
 ls							Show the content of a directory
@@ -38,6 +38,7 @@ cd folder\ test				escaping if a folder has a whitespace (cmd + alt + /)
 -lat 						Show list with all (hidden) files by date
 -C 							list entries by columns
 -d 							list directory themselves, not their contents
+|							Pipe: Command is forwarded to another command
 
 #helpers
 pwd							Who i am? print absolut path
@@ -99,6 +100,7 @@ find /folder folder or file 		Search in specific folder
 find /folder -type d 				Search in for specific folder only for folders
 find /folder -type f 				Search in for specific files only for files
 find /folder -type f -size 100k		Search in for specific files only for files < 100k
+grep 								Browse files for specific pieces of text with regular expressions
 sudo find / 						Search the entire hard disk with admin rights
 sudo find / -atime 2				Search only for files changed in the last 2 days
 sudo updatedb						Update the database		
@@ -107,7 +109,11 @@ sudo updatedb						Update the database
 cd /var/log							Navigate to the logfiles folder
 ls -lat 							Show list with all (hidden) files by date
 cat syslog.1						Show the content of the syslog.1 file
-
+cat syslog.1 | grep	term			Search for a spefic term in the syslog.1 file
+cat syslog.1 | grep	term -v			... Show files where a certain term does not occur
+cat syslog.1 | grep	term | sort		... Sort by date
+cat syslog.1 | grep	term | sort		... Sort by date in reverse order
+cat syslog.1 | grep	term | wc		... Count Words (lines, words, chars)
 
 #Shell Scripts
 nano helloworld.sh 					Create a new shell script (#!/bin/bash)
@@ -126,7 +132,7 @@ sudo								work with admin permissions
 sudo -s 							work permanetly with admin permissions
 -g 									work globally
 
-#SSH
+#SSH & FTP
 ssh -l <username> <IP>				Connect with bash to linux server
 bash								Starts bash
 sh 									Go back to simple shell

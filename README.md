@@ -10,4 +10,4 @@
 => 7. shell scripts
 => 8. values
 => 9. admin
-=> 10. SSH
+=> 10. SSH + SFTP
