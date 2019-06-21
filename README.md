@@ -10,4 +10,5 @@
 => 7. shell scripts
 => 8. values
 => 9. admin
-=> 10. #Interfaces, SSH + SFTP
+=> 10. Interfaces, SSH + SFTP
+=> 11. Ownership and access rights

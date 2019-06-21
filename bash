@@ -11,6 +11,7 @@
 => 8. values
 => 9. admin
 => 10. SSH + SFTP
+=> 11. Ownership and access rights
 
 #main commands
 ls							Show the content of a directory
@@ -141,8 +142,37 @@ lo 									loopback, internal system communication
 eth / em / en 						ethernet intertfaces
 wlan 								wlan interfaces
 
-
 ssh -l <username> <IP>				Connect with bash to linux server
 bash								Starts bash
 sh 									Go back to simple shell
+
+#Ownership and access rights
+d-rw-rw-rwx										directory / owner / group / others
+-rw-rw-r-- 										file / owner / group / others
+r 												read permissions
+w 												write permissions
+x 												exuecute permissions
+-												No permissions
+
+ps 												Show running processes
+ps -u 											Show running processes per user
+ps -ax 											Show all processes
+ps -aux											Show all prcesses of all users
+
+chown newUser:currentUser						Change access rights
+sudo chown newUser:currentUser					Change access rights with admin persmissions
+sudo chown newUser:currentUser file1 file2		Change the access rights of specific files
+sudo chown newUser:currentUser *				Change all access rights with admin persmissions
+
+chmod ugo 	 									Change access rights for u = owner g = group o = others
+chmod u+x file 									Change access rights for owner to execute persmissions
+chmod o+rwx  									Change access rights for others to read, wrike and execute persmissions
+chmod 000 										Change access rights for u = owner g = group o = others to no persmissions
+chmod 001 										Change access rights for o = others to execute persmissions
+chmod 222										... write persmissions
+chmod 333										... write and execute persmissions
+chmod 444										... read persmissions
+chmod 555 										... read and exuecute persmissions
+chmod 666 										... read and write persmissions
+chmod 666 										... read, write and exuecute persmissions
 
