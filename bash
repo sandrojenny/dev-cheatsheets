@@ -1,4 +1,4 @@
-### Shell Cheatsheet ###
+### Linux/Bash Cheatsheet ###
 
 ## Table of Content ##
 => 1. main commands
@@ -7,12 +7,13 @@
 => 4. work with files + folders
 => 5. search + update
 => 6. filter + analyze
-=> 7. shell scripts
-=> 8. values
-=> 9. admin
-=> 10. SSH + SFTP
-=> 11. Ownership and access rights
-=> 12. User and group management
+=> 7. values
+=> 8. admin
+=> 9. SSH + SFTP
+=> 10. Ownership and access rights
+=> 11. User and group management
+=> 12. Operating system, processes and tools
+=> 13. shell scripts
 
 #main commands
 ls							Show the content of a directory
@@ -117,12 +118,6 @@ cat syslog.1 | grep	term | sort		... Sort by date
 cat syslog.1 | grep	term | sort		... Sort by date in reverse order
 cat syslog.1 | grep	term | wc		... Count Words (lines, words, chars)
 
-#Shell Scripts
-nano helloworld.sh 					Create a new shell script (#!/bin/bash)
-chmod +x helloworld.sh 				Gives the file the permissions to exuecute
-./helloworld.sh 					Executes the script
-sudo mv helloworld.sh /bin 			Moves the script into the /bin folder (let you exuecute the file globally without specifying the path)
-
 #values
 echo "Hello World"					Outputs the string
 echo $HOME							Shows the value of the home varibale
@@ -158,11 +153,6 @@ w 												write permissions
 x 												exuecute permissions
 -												No permissions
 
-ps 												Show running processes
-ps -u 											Show running processes per user
-ps -ax 											Show all processes
-ps -aux											Show all prcesses of all users
-
 chown newUser:currentUser						Change access rights
 sudo chown newUser:currentUser					Change access rights with admin persmissions
 sudo chown newUser:currentUser file1 file2		Change the access rights of specific files
@@ -181,22 +171,48 @@ chmod 666 										... read and write persmissions
 chmod 666 										... read, write and exuecute persmissions
 
 #User and group management
-sudo 						    admin / root permissions
-suod -s 						work permanetly as root user
-sudo passwd unsername			Change password for a specific user		
+sudo 						    				admin / root permissions
+suod -s 										work permanetly as root user
+sudo passwd unsername							Change password for a specific user		
 
-su root 						switch user to root (Password must be set first)
-echo $home 						show home directory when loggedin as root
+su root 										switch user to root (Password must be set first)
+echo $home 										show home directory when loggedin as root
 
-adduser newUsername 			Add a new user
-adduser username group 			Add a user to a group
-adduser usnername root			Add a user to the root group
-deluser username 				Delete a user
-deluser username group 			Remove a user from a group
-addgroup newGroupname			Add a new group
+adduser newUsername 							Add a new user
+adduser username group 							Add a user to a group
+adduser usnername root							Add a user to the root group
+deluser username 								Delete a user
+deluser username group 							Remove a user from a group
+addgroup newGroupname							Add a new group
 
-nano /etc/group 				Edit the config file for groupes
+nano /etc/group 								Edit the config file for groupes
 
+#Operating system, processes and tools
+ps 													Show running processes
+ps -u 												Show running processes per user
+ps -ax 												Show all processes
+ps -aux												Show all prcesses of all users
 
+crontab -e 											Start cron job editor
+0 5 * * 1 ping www.google.com						Start the cron job every week 1x/day at 5am (m / h / dom / mon / dow)
+*/5 5 * * 1 										... every 5 minutes first day of week at 5am
+0 1.5 * * 1 										... every day at 1am and 5am
+0 5 2.6 * *											... every week at 5am on the 2th and 6th of the month
+*													Always
+m													minute
+h													hour
+dom													day of month
+mon 												month
+dow													day of week	
+0 5 * * 1 ping www.google.com > /dev/null 			forwards the output to /dev/null, deletes all successful notifications
+0 5 * * 1 ping www.google.com > /dev/null 2>&1		... attach the second output (failures) to the output 1
+MAILTO="maxmuster@gmail.com" 						Sends the output to a email adress
 
+ping www.google.com 								Check if a website (google) is available 
+ping -c 1											... ping only once
 
+#Shell Scripts
+nano helloworld.sh 					Create a new shell script (#!/bin/bash)
+chmod +x helloworld.sh 				Gives the file the permissions to exuecute
+./helloworld.sh 					Executes the script
+sudo mv helloworld.sh /bin 			Moves the script into the /bin folder (let you exuecute the file globally without specifying the path)
