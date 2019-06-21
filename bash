@@ -148,6 +148,9 @@ sh 									Go back to simple shell
 
 #Ownership and access rights
 d-rw-rw-rwx										directory / owner / group / others
+l-rw-rw-rwx										link / owner / group / others
+b-rw-rw-rwx										block oriented device file / owner / group / others
+c-rw-rw-rwx										char oriented device file / owner / group / others
 -rw-rw-r-- 										file / owner / group / others
 r 												read permissions
 w 												write permissions
