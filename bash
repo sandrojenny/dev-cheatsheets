@@ -132,7 +132,16 @@ sudo								work with admin permissions
 sudo -s 							work permanetly with admin permissions
 -g 									work globally
 
-#SSH & FTP
+#Interfaces, SSH & SFTP
+ifconfig							Displays the status of the systems active interfaces
+ifconfig -a 						Display all interfaces
+ifconfig eth0						Display the configuration of the eth device
+enp0s3								Ubuntu / local system
+lo 									loopback, internal system communication
+eth / em / en 						ethernet intertfaces
+wlan 								wlan interfaces
+
+
 ssh -l <username> <IP>				Connect with bash to linux server
 bash								Starts bash
 sh 									Go back to simple shell
