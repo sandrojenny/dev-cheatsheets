@@ -9,12 +9,13 @@
 => 6. filter + analyze
 => 7. values
 => 8. admin
-=> 9. SSH + SFTP
+=> 9. Interfaces, SSH + SFTP
 => 10. Ownership and access rights
 => 11. User and group management
 => 12. Operating system, processes and tools
 => 13. Shell scripts
 => 14. Package Manager APT
+=> 15. WebServer + Databases
 
 #main commands
 ls							Show the content of a directory
@@ -182,7 +183,6 @@ su root 										Switch user to root (Password must be set first)
 echo $home 										Show home directory when loggedin as root
 whoami											Shows as which user you work
 
-
 adduser newUsername 							Add a new user
 adduser username group 							Add a user to a group
 adduser usnername root							Add a user to the root group
@@ -225,15 +225,41 @@ ping www.google.com 								Check if a website (google) is available
 ping -c 1											... ping only once
 
 #Shell Scripts
-nano helloworld.sh 					Create a new shell script (#!/bin/bash)
-chmod +x helloworld.sh 				Gives the file the permissions to exuecute
-./helloworld.sh 					Executes the script
-sudo mv helloworld.sh /bin 			Moves the script into the /bin folder (let you exuecute the file globally without specifying the path)
+nano helloworld.sh 									Create a new shell script (#!/bin/bash)
+chmod +x helloworld.sh 								Gives the file the permissions to exuecute
+./helloworld.sh 									Executes the script
+sudo mv helloworld.sh /bin 							Moves the script into the /bin folder (let you exuecute the file globally without specifying the path)
 
 #Package Manager APT
-apt 								Show commands
-apt-cache search packageName		Search packages
-apt-get install packageName			Install package
-apt-get remove packageName			Deinstall package
-apt-get update 						Update all packages
+apt 												Show commands
+apt-cache search packageName						Search packages
+apt-get install packageName							Install package
+apt-get remove packageName							Deinstall package
+apt-get update 										Update all packages
+
+#WebServer & Databases
+$ sudo apt-cache search php
+$ sudo apt-cache search php-mysql
+$ sudo apt-get install php7.2 
+$ sudo apt-get install php-mysql
+$ sudo apt-get install mysql-server
+$ sudo apt-get install wget
+
+sudo mysql -uroot													Start MySQL
+help;																Show Help Info and Commands
+status																... show MySQL Status
+version 															... show MySQL Version
+show databases;														Shows a list of all databases
+create database databaseName;										Create a new database
+create user 'userName'@'localhost' identified by 'password';		Create a new user and password
+GRANT ALL PRIVILEGES ON wordpress.* TO 'userName'@'localhost'; 		Give all permissions to a specific user an database
+
+cd /var/www/														Go to webserver directory
+sudo wget ServerAdressOfTheApplication 								Install a Application to the directory
+sudo wget https://wordpress.org/latest.tar.gz 						Install Wordpress (Example)
+sudo tar xvfz latest.tar.gz -C html/								Unzip the files to the html directory
+sudo chown www-data.www-data -R wordpress/ 							Set permissions to the user www-data and group www-data
+
+sudo service apache2 restart 										Restart the apache2 service
+
 
