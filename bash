@@ -174,10 +174,14 @@ chmod 666 										... read, write and exuecute persmissions
 #User and group management
 sudo 						    				admin / root permissions
 suod -s 										work permanetly as root user
-sudo passwd unsername							Change password for a specific user		
+sudo passwd unserName							Change password for a specific user		
 
-su root 										switch user to root (Password must be set first)
-echo $home 										show home directory when loggedin as root
+su userName 									Switch user, work in current workspace
+su - userName 									Switch user and workspace
+su root 										Switch user to root (Password must be set first)
+echo $home 										Show home directory when loggedin as root
+whoami											Shows as which user you work
+
 
 adduser newUsername 							Add a new user
 adduser username group 							Add a user to a group
