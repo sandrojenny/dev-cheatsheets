@@ -13,4 +13,5 @@
 => 10. Ownership and access rights
 => 11. User and group management
 => 12. Operating system, processes and tools
-=> 13. shell scripts
+=> 13. Shell scripts
+=> 14. Package Manager APT

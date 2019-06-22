@@ -13,7 +13,8 @@
 => 10. Ownership and access rights
 => 11. User and group management
 => 12. Operating system, processes and tools
-=> 13. shell scripts
+=> 13. Shell scripts
+=> 14. Package Manager APT
 
 #main commands
 ls							Show the content of a directory
@@ -191,7 +192,15 @@ nano /etc/group 								Edit the config file for groupes
 ps 													Show running processes
 ps -u 												Show running processes per user
 ps -ax 												Show all processes
-ps -aux												Show all prcesses of all users
+ps -aux												Show all processes with users
+ps -aux | grep root 								Show only task of with term root
+top													update settings
+kill -9	1712 (PID)									Terminate process 
+killall -9 processName 								Terminate process 
+
+PID 												Process ID
+%CPU												CPU load
+%MEM 												Memory load
 
 crontab -e 											Start cron job editor
 0 5 * * 1 ping www.google.com						Start the cron job every week 1x/day at 5am (m / h / dom / mon / dow)
@@ -216,3 +225,11 @@ nano helloworld.sh 					Create a new shell script (#!/bin/bash)
 chmod +x helloworld.sh 				Gives the file the permissions to exuecute
 ./helloworld.sh 					Executes the script
 sudo mv helloworld.sh /bin 			Moves the script into the /bin folder (let you exuecute the file globally without specifying the path)
+
+#Package Manager APT
+apt 								Show commands
+apt-cache search packageName		Search packages
+apt-get install packageName			Install package
+apt-get remove packageName			Deinstall package
+apt-get update 						Update all packages
+
