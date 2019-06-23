@@ -66,7 +66,6 @@ mkdir test-folder						Creates the folder «test-folder»
 touch test-document						Creates a new empty txt-file
 
 rmdir test-folder						Deletes the folder «test-folder» (works only with empty folders)
-rmdir -p test-folder					Deletes the folder an its acestors
 rm test-document						Deletes the txt-file
 rm test-document*						Deletes all txt-files 
 rm -r test-folder						Deletes the folder and all its contents recursively
@@ -170,7 +169,7 @@ chmod 333										... write and execute persmissions
 chmod 444										... read persmissions
 chmod 555 										... read and exuecute persmissions
 chmod 666 										... read and write persmissions
-chmod 666 										... read, write and exuecute persmissions
+chmod 777 										... read, write and exuecute persmissions
 
 #User and group management
 sudo 						    				admin / root permissions
