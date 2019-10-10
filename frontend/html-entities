@@ -1,21 +1,13 @@
 &Tab;
-
 &NewLine;
-
-!		&excl;
-"		&quot; &QUOT;
-#
-&num;
-$
-&dollar;
-%
-&percnt;
-&
-&amp; &AMP;
-'
-&apos;
-(
-&lpar;
+!			&excl;
+"			&quot; &QUOT;
+#			&num;
+$			&dollar;
+%			&percnt;
+&			&amp; &AMP;
+'			&apos;
+(			&lpar;
 )
 &rpar;
 *

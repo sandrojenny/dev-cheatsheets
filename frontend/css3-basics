@@ -1,0 +1,112 @@
+### CSS3 Basics Cheatsheet ###
+
+CSS3 Generator 		http://css3generator.com/
+Google Fonts 		https://fonts.google.com/
+Font Awesome 		https://fontawesome.com
+Compatiblity Check 	https://caniuse.com/
+
+## Box Model ##
+float				specifies whether an element should float
+clear				control the behavior of floating elements
+height				auto, %, px, em, rem
+max-height			none, %, px, em, rem
+min-height			none, %, px, em, rem
+width				auto, %, px, em, rem
+max-width			none, %, px, em, rem
+min-width			none, %, px, em, rem
+margin				top, right, bottom, left
+padding				top, right, bottom, left
+
+overflow			specifies what happens if content overflows an elements box
+overflow			overflow-y, overflow-x
+overflow-style		auto, marquee-line, marquee-block
+rotation			angle
+rotation-point		position
+visiblity			visible, hidden, collapse
+display				none, inline, block, inline-block
+
+# Box Shadow #
+
+  #box-shadow {
+    -webkit-box-shadow: 3px 3px 3px 3px #000000;
+    box-shadow: 3px 3px 3px 3px #000000
+  }
+
+## Border ## 
+border				width, style, color
+border-left			width, style, color
+border-right		width, style, color
+border-top			width, style, color
+border-bottom		width, style, color
+border-left-color	color
+border-style		none, solid, dotted, dashed ...
+ 
+# Border Image #
+
+	#border-img {
+     -webkit-border-image: url(border.png) 30 round;
+     -o-border-image: url(border.png) 30 round;
+     border-image: url(border.png) 30 round;
+	}
+
+# Border Radius #
+
+  #border-round {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+	}
+
+## Clearfix Hack – force an element to self-clear its children ##
+
+	.clearfix::after {
+	  content: "";
+	  clear: both;
+	  display: block;
+	  visibility: hidden;
+	}
+
+## Fonts ##
+font-family			"Times New Roman", Times, serif;
+font-size			%, em, rem, px
+font-weight			normal, bold, bolder, lighter, 100, 200 ...
+font-style			normal, italic, oblique, inherit
+font-variant		normal, small-caps, inherit
+font-stretch		normal, wider, narrower, condensed, semi-condensed, ultra-condensed, expanded, semi-expanded, extra-expanded, ultra-expanded
+
+## Text	##
+text-align			start, end, left, right, center, justify
+text-align-last		start, end, left, right, center, justify
+text-justify		specifies how text should be aligned and spaced
+text-decoration		none, underline, overline, line-through, blink
+text-transform		none, capitalize, uppercase, lowercase
+text-wrap			normal, unrestricted, none, suppress
+text-shadow			horizontal length, vertical length, blur radius, color
+word-break			Specifies line breaking rules
+word-wrap			Allows long words to be able to be broken
+
+# Google Fonts #
+	@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+	#title {
+	  font-family: 'Open Sans', sans-serif;
+	}
+
+# Font Awesome #
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<ul class="fa-ul">
+	  <li><i class="fa-li fa fa-check-square"></i>List icons</li>
+	  <li><i class="fa-li fa fa-check-square"></i>can be used</li>
+	  <li><i class="fa-li fa fa-spinner fa-spin"></i>as bullets</li>
+	  <li><i class="fa-li fa fa-square"></i>in lists</li>
+	</ul>
+
+# Multiple Columns #
+	columns {
+	  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+	  -moz-column-count: 3; /* Firefox */
+	  column-count: 3;
+	  -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+	  -moz-column-gap: 40px; /* Firefox */
+	  column-gap: 40px;
+	}

@@ -1,0 +1,68 @@
+### CSS3 Selectors Cheatsheet ###
+
+## Selector Types ##
+#firstname				Selects the element with id="firstname"
+.title					Selects all elements with class="intro"	
+div						Selects all <div> elements
+div h2					Selects all h2 elements and all <div> elements
+div, p 					Selects all <div> elements and all <p> elements
+main > h2 				child -> Selects all <p> elements where the parent is a <div> element
+div ~ p 				sister -> Selects every <ul> element that are preceded by a <p> element
+div + p 				sister -> Selects all <p> elements that are placed immediately after <div> elements
+
+## Attribute Selector Types ##
+[target]				Selects all elements with a target attribute
+[target=_blank]			Selects all elements with target="_blank"
+[title~=flower]			Selects all elements with a title attribute containing the word "flower"
+[lang|=en]				Selects all elements with a lang attribute value starting with "en"
+a[href^="https"]		Selects every <a> element whose href attribute value begins with "https"
+a[href$=".pdf"]			Selects every <a> element whose href attribute value ends with ".pdf"
+a[href*="w3schools"]	Selects every <a> element whose href attribute value contains the substring "w3schools"
+
+## Hyperlinks Selector Type ## 
+a:link					unvisited link
+a:visited				visited link
+a:hover					link mouse over
+a:active				activated link
+#id:target				current active element (clicked on a URL containing that anchor name)
+
+## Pseudo Selectors & Classes ##
+p::after				Insert something after the content of each <p> element
+p::before				Insert something before the content of each <p> element
+p:empty					Selects every <p> element that has no children (including text nodes)
+
+# Form Selectors & Classes #
+input:checked			Selects every checked <input> element
+input:default			Selects the default <input> element
+input:disabled			Selects every disabled <input> element
+input:enabled			Selects every enabled <input> element
+input:focus				Selects the input element which has focus
+input:in-range			Selects input elements with a value within a specified range
+input:indeterminate		Selects input elements that are in an indeterminate state
+input:invalid			Selects all input elements with an invalid value
+input:valid				Selects all input elements with a valid value
+input:optional			Selects input elements with no "required" attribute
+input:out-of-range		Selects input elements with a value outside a specified range
+input::placeholder		Selects input elements with placeholder text
+input:read-only			Selects input elements with the "readonly" attribute specified
+input:read-write		Selects input elements with the "readonly" attribute NOT specified
+input:required			Selects input elements with the "required" attribute specified
+
+# Child Selectors #
+p:first-child			Selects every <p> element that is the first child of its parent
+p::first-letter			Selects the first letter of every <p> element
+p::first-line			Selects the first line of every <p> element
+p:first-of-type			Selects every <p> element that is the first <p> element of its parent
+p:last-child			Selects every <p> element that is the last child of its parent
+p:last-of-type			Selects every <p> element that is the last <p> element of its parent
+p:nth-child(2)			Selects every <p> element that is the second child of its parent
+p:nth-last-child(2)		Selects every <p> element that is the second child of its parent, counting from the last child
+p:nth-last-of-type(2)	Selects every <p> element that is the second <p> element of its parent, counting from the last child
+p:nth-of-type(2)		Selects every <p> element that is the second <p> element of its parent
+p:only-of-type			Selects every <p> element that is the only <p> element of its parent
+p:only-child			Selects every <p> element that is the only child of its parent
+:not(p)					Selects every element that is not a <p> element
+:root					Selects the document's root element
+::selection				Selects the portion of an element that is selected by a user
+#news:target			Selects the current active #news element (clicked on a URL containing that anchor name)
+p:lang(it)				Selects every <p> element with a lang attribute equal to "it" (Italian)
