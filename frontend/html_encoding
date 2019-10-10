@@ -1,4 +1,8 @@
 
+### HTML5 Encoding & Entities Cheatsheet ###
+
+HTML Entities: https://dev.w3.org/html5/html-author/charref
+
 Dez		Hex		Okt		ASCII
 
 0		0x00	000		NUL
