@@ -1,0 +1,103 @@
+### JavaScript Basics Cheatsheet ###
+
+Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+
+## General ##
+var	camelCase = "Expression"							variable
+let camelCase = 5;										variable (new)
+let data = new Array("Apple", "Banana", "Pear");		Array
+function repeatSong() {}								function
+"use strict"											activates the strict mode
+'Hello' + 'World'										Append a text
+
+## Properties ##
+.length								Stores the number of characters in a string
+
+## Arrays ##
+.sort()								sort array in alphabetical order
+.push()								adds a new element
+.pop()								removes the last element
+.shift()							removes the first element
+.unshift()							adds a new element
+.splice()							adds a new elements (where, how many, elements)
+.join()								joins all array elements into a string
+
+## functions ##
+console.log(5);						print out a number to the console
+console.log('Hello World');			print out a string ...
+alert()								pop up window
+.focus()							put focus on a element
+.blur()								lose focus
+setTimeout()						set a timeout (function, time)
+clearTimeout()						prevent the function from running
+
+## Document Object ##
+document.write
+document.location, 
+document.location.href
+document.getElementById("id")
+document.getElementsByClassName("class") 
+
+## Fucntiosn for Strings ##
+.trim()								Remove the whitespace
+.toString()							converts to a string
+.toLocaleSting()					returns a exponential string, rounded
+.toUpperCase()						converts to upper
+.toLowerCase()						converts to lower
+.concat()							combines two or more strings
+.indexOf()							returns the first position of the text
+.lastIndexOf()						returns the last position of the text
+.str()								returns the character
+.charAt()							returns the character
+.charCodeAt()						returns the unicode of the character
+.search()							returns the position of the text
+.replace()							replaces a value with another
+.slice()							extracts a part of a string returns text
+.substr()							extracts a part of a string returns text
+.split()							splits the string (separator)
+
+## Methods ##
+.startsWith()						Checking if the first string is { string }, returns a boolean { true / false } 
+.valueOf()							convert Number objects to primitive values
+.hasOwnProperty()					returns a string with a specified number of decimals
+.isPrototypeOf()					convert Number objects to primitive values
+.propertyIsEnumerable()				returns an integer
+
+## Math Objects ##
+Math.random()						Prints a random number between 0 and 1
+Math.random() * 50					Prints a random number between 0 and 50
+Math.floor(42.34)					Rounds the number down to the nearest whole number // 42
+Math.ceil(43.22)					Returns the next smallest integer greater than or equal to a number // 44
+ 
+## Numbers ##
+.isInteger()						Check if number is a integer // true
+.toString()							convert number into a string
+.toExponential()					returns a exponential string, rounded
+.toFixed()							returns a string with a specified number of decimals
+.toPrecision()						returns a string with a specified number of decimals
+.valueOf()							convert Number objects to primitive values
+parseInt()							returns an integer
+parseFloat()						returns a floating number
+Number()							convert JS variables into numbers
+isNAN()								check wheter it is a Number?
+eval()								evaluates or executes an argument
+
+## Date	##
+new Date()							creates date object (YYYY-MM-DDT12:00:00)
+.toDateString()						converts a date to a more readable format
+.getTime()							returns milliseconds since January 1, 1970
+.getFullYear()						returns the year (2016)
+.getMonth()							returns the Month as number (0-11)
+.getDay()							returns the day as number (0-6)
+.getHours()							returns the Hour as number (0-23)
+.getMinutes()						returns the Minutes as number (0-59)
+.getSeconds()						returns the Seconds as number (0-59)
+.getMilliseconds()					returns the Minutes as number (0-999)
+.setTime()							Set milliseconds since January 1, 1970
+.setFullYear()						Set the year (2016)
+.setMonth()							Set the Month as number (0-11)
+.setDay()							Set the day as number (0-6)
+.setHours()							Set the Hour as number (0-23)
+.setMinutes()						Set the Minutes as number (0-59)
+.setSeconds()						Set the Seconds as number (0-59)
+.setMilliseconds()					Set the Minutes as number (0-999)

@@ -1,0 +1,47 @@
+### JavaScript DOM Cheatsheet ###
+
+## Document Object ##
+.getElementById()					Find an element by element id
+.getElementsByTagName()				Find an element by tag name
+.getElementsByClassName()			Find an element by class name
+.querySelector()					Find an element by CSS Selector like => .cssstyle .csstyletwo[rel='hello']
+.querySelectorAll()					Finds all element by a specific CSS Selector
+
+.createElement()					create HTML element
+.createTextNode()					create text
+.write()							write text into the html element
+.appendChild()						add html element
+.removeChild()						remove html element
+.replaceChild()						replace html element
+
+.baseURI							returns baseURI
+.documentURI						returns URI of the document
+.domain								returns domain name
+.cookie								returns cookie of the document
+.documentElement					returns document html element
+.form								returns form-elements
+.title								returns title of the document
+.location.href						returns information about the URL
+
+## Elements ##
+.innerHTML = "new html content"			change html content of a element
+.innerText = "new text content"			change text content of a element
+.attribute = "value"					change value of a html element
+.setAttribute('style', 'color:blue;')	change attribute value of a html element (attribute, value)
+.className								Access a CSS-Class
+.classList								Access a CSS-Class / .add(), .remove(), .toggle()
+.style.property = "color:blue;"			change style of a html element
+.style.color = "blue"					change style of a html element
+
+
+## Event Listener ##
+
+.addEventListener()						Add a EventListener ("event", function)
+
+window.addEventListener("load", function(){
+	  document.getElementById("myBtn").addEventListener("click", myFunction);
+
+	  function myFunction() {
+	    document.getElementById("demo").innerHTML = Date();
+	  }
+	});

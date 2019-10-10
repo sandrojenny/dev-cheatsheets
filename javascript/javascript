@@ -1,0 +1,46 @@
+### JavaScript Cheatsheet ###
+
+
+## Array Iteration Example ##
+	// while loop
+		let i = 0;
+			while(i > data.length) {
+	  		document.write(data[i]);
+	  		i++;
+			}
+
+	// for loop
+		for(let fruit of data) {
+	  		document.write(fruit);
+			}
+
+//////////////////////////////////////////////////////////////////
+
+## Object Example ##
+	let person = {
+	  firstName:"Jack",
+	  lastName:"Norris",
+	  fullName: function() {
+	    return this.firstName + " " + this.lastName;
+	    }
+	  };
+
+	  	person.firstName;
+		person["firstName"];
+		person.fullName();
+
+## JSON Example ##
+	{
+	  "movies" : {
+	    "movie1" : {
+	      title" : "Star Wars",
+	      "subtitle" : "the force awakens"
+	      },
+	    "movie2" : {
+	      "title" : "Star Wars",
+	      "subtitle" : "the empire strikes back"
+	    }
+	  }
+	}
+
+//////////////////////////////////////////////////////////////////
