@@ -1,0 +1,83 @@
+### HTML5 Basics Cheatsheet ###
+
+Doc: https://www.w3schools.com/tags/
+
+## head meta tags ##
+<!DOCTYPE html >
+<!DOCTYPE html lang="de-CH"> (Read more about Language & Country Codes)
+<title>Title<title>
+<meta charset="UTF-8">
+<meta name="author" content="name">
+<meta name="description" content="description">
+<meta name="keywords" content="keywords">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2010-05-15T08:49:37+02:00">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta http-equiv="refresh" content="30">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+## head links tags ##
+<link href="css/style.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="canonical" href="https://example.com/content.html">
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js">
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+
+## Section tags ##
+<header>		header section
+<nav>			navigation section
+<main>			main content area
+<section>		additional sections
+<article>		content like blog post
+<aside>			area aside from the content
+<address>		adress element
+<footer>		footer section
+
+## Media tags ##
+<canvas>		area to draw via js
+<svg>			area to draw via svg
+<audio>			sound content
+<video>			video content
+<source>		specify media ressources
+<embed>			container for a plugin
+<track>			specify text in media-tag
+
+## Lists ##
+ul				Unordered list
+ol				Ordered list
+li				List item
+dl				description list
+dt				description term
+dd				description data
+display:inline	CSS property to display a list horizontally
+
+## Tables ##
+tr				Row
+th				Header Cell
+td				Cell
+caption			Caption
+colgroup		groupes one or more columns
+col				Properties for each column in a colgroup
+thead			Groupes the header content
+tbody			Groupes the body content
+tfoot			Groupes the footer content
+
+	<table style="width:100%">
+	  <tr>
+	    <th>Firstname</th>
+	    <th>Lastname</th>
+	    <th>Age</th>
+	  </tr>
+	  <tr>
+	    <td>Jill</td>
+	    <td>Smith</td>
+	    <td>50</td>
+	  </tr>
+	  <tr>
+	    <td>Eve</td>
+	    <td>Jackson</td>
+	    <td>94</td>
+	  </tr>
+	 </table>
+

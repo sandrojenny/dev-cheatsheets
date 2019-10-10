@@ -1,0 +1,120 @@
+### HTML5 Basics Cheatsheet ###
+
+Docs: https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms
+
+## Form Elements ##
+<form>				view form attributes
+<input>				view input types
+<textarea>			name, rows, cols
+<button>			type, onclick
+<label>				defines a label for an <input>
+<fieldset>			<legend>
+<legend>			defines a caption for <fieldset>
+<select>			<option>
+<option>			value, selected, optgroup
+<optgroup>			related options in a drop-down
+<datalist>			<option>
+
+## Form Attributes ##
+accept-charset
+action="index.html"
+autocomplete
+name
+method="get"
+target
+
+## Simple Form ##
+	<form action="/action_page.php">
+	  First name:<br>
+	  <input type="text" name="firstname" value="Mickey"><br>
+	  Last name:<br>
+	  <input type="text" name="lastname" value="Mouse"><br><br>
+	  <input type="submit" value="Submit">
+	</form>
+
+## Text Area ##
+	<textarea name="message" rows="10" cols="30">
+	The cat was playing in the garden.
+	</textarea>
+
+## Button ##
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+
+## Drowpdown List ##
+	<select name="cars">
+	  <option value="volvo">Volvo</option>
+	  <option value="saab">Saab</option>
+	  <option value="fiat">Fiat</option>
+	  <option value="audi">Audi</option>
+	</select>
+
+## Allow multiple selections ##
+	<select name="cars" size="4" multiple>
+	  <option value="volvo">Volvo</option>
+	  <option value="saab">Saab</option>
+	  <option value="fiat">Fiat</option>
+	  <option value="audi">Audi</option>
+	</select>
+
+## Data List ##
+	<form action="/action_page.php">
+	  <input list="browsers">
+	  <datalist id="browsers">
+	    <option value="Internet Explorer">
+	    <option value="Firefox">
+	    <option value="Chrome">
+	    <option value="Opera">
+	    <option value="Safari">
+	  </datalist>
+	</form>
+
+## Calculation Outout ##
+	<form action="/action_page.php"
+	  oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+	  0
+	  <input type="range"  id="a" name="a" value="50">
+	  100 +
+	  <input type="number" id="b" name="b" value="50">
+	  =
+	  <output name="x" for="a b"></output>
+	  <br><br>
+	  <input type="submit">
+	</form>
+
+## input types ## 
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week">
+
+## input Attributes ##
+name
+value
+size
+required
+readonly
+number
+range
+search
+tel
+time
+url
