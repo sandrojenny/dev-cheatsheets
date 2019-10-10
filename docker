@@ -3,10 +3,28 @@
 Website: https://docs.docker.com
 
 # Installing docker
-=> https://docs.docker.com/docker-for-mac/install/
+=> https://hub.docker.com
+
+# LogIn
+docker login 
+ => username ( sandrojenny )
+ => pw ( WNj^7ae9yp )
+
+
+# Build and push Docker Image
+=> Creating a Dockerfile
+cat > Dockerfile <<EOF
+FROM busybox
+CMD echo "Hello world! This is my first Docker image."
+EOF
+
+docker build -t <your_username>/my-first-repo		Build Docker image
+docker run <your_username>/my-first-repo 			Test Docker image
+docker push <your_username>/my-first-repo			Push Docker Image
 
 # Commands
-docker images				shows all docker images
-docker pull <image>			downloads a docker image
-docker run <image>			creates a docker images
-
+docker images										shows all docker images
+docker pull <image>									downloads a docker image
+docker run <image>									creates a docker images
+docker run -it --rm <your_username>/my-first-repo
+docker ps 											Alle container die gestartet sind

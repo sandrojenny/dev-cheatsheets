@@ -1,32 +1,49 @@
-*** Pimcore Cheatsheet ***
+*** Docker ***
+docker ps 		Alle container die gestartet sind
 
-Website: https://pimcore.com/docs/5.x/index.html
+*** Pimcore lokal installieren / Skeleton clonen von git-hub
+=> https://github.com/w-vision/pimcore-skeleton
+=> Users/sandrojenny/git/folder
+git clone 
 
-# Simple and easy Docker-Compose configuration for Pimcore 5:
-– https://github.com/dpfaffenbauer/pimcore-docker-compose/blob/master/README.md
+*** docker-compose up -d
+=> Docker Images (Image => Dockerfile / Server Konfig / Tools )
+=> Image für alle Umgebungen ( Dev (Lokal) / Stage (ONLINE) / Production (ONLINE => LIVE) )
+=> Images werden global im System angelegt
+=> Image Updates (Lokal neu builden)
 
-# Requirements
-– git
-– docker
-– docker-compose
+*** Auf Docker Container mit bash arbeiten
+docker-compose exec php bash
 
-# Installting Pimcore
-– git clone https://github.com/dpfaffenbauer/pimcore-docker-compose.git
-– cd pimcore-docker-compose/
-– docker-compose up (Run Containers)
+*** Mac-Filesystem Berechtigungen vergeben
+docker-compose exec php chmod +x /var/www/html/bin/console
+=> oder chmod +x /var/www/html/bin/console (Wenn schon eingeloggt)
 
-# Choose which package to install 
-– https://pimcore.com/docs/5.x/Development_Documentation/Getting_Started/Installation.html#page_Choose-a-package-to-install
+*** PHP Packaged downloaden und installieren / Berechtigungen vergeben
+docker-compose exec php composer install --prefer-dist
+=> Bei php Fehler => Order app/config/local/.gitkeep
 
-#Install Pimcore
-– docker exec -it pimcore-php bash (get shell in running container)
-– COMPOSER_MEMORY_LIMIT=-1 composer create-project pimcore/demo-basic-twig tmp mv tmp/* .
-– echo 'memory_limit = 512M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini; 
-– service apache2 reload
+=> Dependencies updaten
+composer update
 
-#Run Installer
-./vendor/bin/pimcore-install --mysql-host-socket=db --mysql-username=pimcore --mysql-password=pimcore --mysql-database=pimcore
+docker-compose exec php chown -R www-data: /var/www/html
 
-#After the installer is finished, you can open in your Browser:
-– Frontend: http://localhost:2000
-– Backend: http://localhost:2000/admin
+
+*** Pimcore installieren / Datenbank konfigurieren
+docker-compose exec php php vendor/bin/pimcore-install --ignore-existing-config --admin-username admin --admin-password admin --mysql-username pimcore --mysql-database pimcore --mysql-host-socket db --mysql-password pimcore --mysql-port 3306 --no-interaction
+
+*** Docker Service neu staren
+exit
+docker-compose down
+docker-compose up -d
+
+*** homebrew installieren
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+*** JavaScript Pakete installieren mit yarn (aus npm repo)
+brew install yarn
+yarn install
+yarn dev
+
+*** Für Deployer (PHP Script für Deployment / Nicht notwendig)
+chmod 600 ./.deployer/id_deployer

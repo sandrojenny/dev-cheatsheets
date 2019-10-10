@@ -1,0 +1,4 @@
+*** Pimcore ****
+
+
+$this->extend('layout.html.php');			 wrap our content page with another template 
