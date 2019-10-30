@@ -1,5 +1,38 @@
-*** Pimcore ****
+### Pimcore ###
 
 Doc: https://pimcore.com/docs/5.x/index.html
 
+## Table of Content ##
+=> 1. Layouts & Templates
+=> 2. Assets
+=> 3. ...
+
+## Layouts & Templates
 $this->extend('layout.html.php');			 wrap our content page with another template 
+
+
+## 1. Assets
+Doc: https://pimcore.com/docs/5.x/Development_Documentation/Assets/Working_with_PHP_API.html 
+
+# Create a new Asset
+$asset = new Asset();
+$asset->setParentId(1);
+$asset->setFilename("my-imported-asset.jpg");
+$asset->setData(file_get_contents("https://i.pinimg.com/originals/cc/89/52/cc8952ed3f57e6f72b4e843035489021.jpg"));
+$asset->save();
+
+# Modify Binary Data of existing Asset
+$asset = Asset::getById(75);
+$asset->setData(file_get_contents("http://2.bp.blogspot.com/-cmLCiXQJ1os/UjH_k7wIPCI/AAAAAAAAAHc/uQuYc5LbiV8/s1600/ComputerDesktopWallpapersCollection309_072.jpg"));
+$asset->save();
+
+# Modifying Meta Data of existing Asset
+$asset = Asset::getById(75);
+$asset->addMetadata("my-data", "input", "there is some additional meta information");
+$asset->save();
+
+# Delete existing Asset
+$asset = Asset::getById(75);
+$asset->delete();
+
+
