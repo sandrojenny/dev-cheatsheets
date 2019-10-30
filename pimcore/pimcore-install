@@ -25,7 +25,6 @@ docker-compose exec php composer install --prefer-dist
 
 => Dependencies updaten
 composer update
-
 docker-compose exec php chown -R www-data: /var/www/html
 
 

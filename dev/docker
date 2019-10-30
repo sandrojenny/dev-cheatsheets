@@ -10,6 +10,10 @@ docker login
  => username ( sandrojenny )
  => pw ( WNj^7ae9yp )
 
+# Docker Service neu staren
+exit
+docker-compose down
+docker-compose up -d
 
 # Build and push Docker Image
 => Creating a Dockerfile
