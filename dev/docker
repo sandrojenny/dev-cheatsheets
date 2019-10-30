@@ -32,3 +32,12 @@ docker pull <image>									downloads a docker image
 docker run <image>									creates a docker images
 docker run -it --rm <your_username>/my-first-repo
 docker ps 											Alle container die gestartet sind
+
+*** docker-compose up -d
+=> Docker Images (Image => Dockerfile / Server Konfig / Tools )
+=> Image für alle Umgebungen ( Dev (Lokal) / Stage (ONLINE) / Production (ONLINE => LIVE) )
+=> Images werden global im System angelegt
+=> Image Updates (Lokal neu builden)
+
+*** Auf Docker Container mit bash arbeiten
+docker-compose exec php bash
