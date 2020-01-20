@@ -1,0 +1,24 @@
+### GDScript Basics Cheatsheet ###
+
+func «Funktion» :			Funktionsaufruf
+#							Linie Auskommentieren
+
+get_node("NodeName")		Node suchen
+
+
+## Standard Methoden ##
+_ready()					Szene und alle Nodes ist geladen
+_init()						Konstruktor
+
+## Prozesse ##
+_process(delta)				Verarbeitung des Skripts, delta = Sync mit Bildrate
+_physics_process()			Steuerung von Charakter, Auto-Sync mit Spielphisik
+Node.set_process()			Ein- und Ausschalten
+
+## Funktionen ##
+
+_
+
+
+.connect("Signal", self, "Funktion")		Mit Signal verbinden
+.text										Text ändern
