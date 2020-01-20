@@ -4,14 +4,14 @@ Doc: https://pimcore.com/docs/5.x/index.html
 
 ## Table of Content ##
 => 1. Layouts & Templates
-=> 2. Assets
+=> 2. Assets & Thumbnails
 => 3. ...
 
 ## Layouts & Templates
 $this->extend('layout.html.php');			 wrap our content page with another template 
 
 
-## 1. Assets
+## Assets & Thumbnails
 Doc: https://pimcore.com/docs/5.x/Development_Documentation/Assets/Working_with_PHP_API.html 
 
 # Create a new Asset
