@@ -1,0 +1,21 @@
+### GDScript Fucntion Cheatsheet ###
+
+## Node Funktionen ##
+.new()										Node erstellen
+.free()										Node löschen
+.queue_free()								Node im Ruhezustand sicher löschen
+
+add_child("NodeName")						Child-Node hinzufügen
+
+#######################################################################################
+
+## Signale ##
+.connect("Signal", self, "Funktion")		Mit Signal verbinden
+
+#######################################################################################
+
+## Text & String Funktionen ##
+.text										Text ändern
+str()										Gibt String zurück
+
+#######################################################################################
