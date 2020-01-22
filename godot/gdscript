@@ -4,10 +4,8 @@
 
 #								Linie Auskommentieren
 var «Variable» = 0				Variable definieren und Wert zuweisen
-
 func «Funktion» :				Funktionsaufruf
-// Code
-pass
+
 
 #######################################################################################
 
