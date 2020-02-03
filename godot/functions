@@ -19,3 +19,33 @@ add_child("NodeName")						Child-Node hinzufügen
 str()										Gibt String zurück
 
 #######################################################################################
+
+## Window ##
+
+get_viewport_rect().size					Grösse des Spielfensters ermitteln
+
+#######################################################################################
+
+## Steuerung ##
+
+velocity									Geschwindkeit
+velocity.x									Horizontale Geschwindkeit
+velocity.y									Vertikale Geschwindkeit
+velocity.normalized()						Geschwindkeit normalisieren (x & y = 1)
+
+position									Position des Spielers
+clamp(position.x, 0, screen_size.x)			Verhindern, dass der Spieler den Bildschirm verlässt
+
+Input.is_action_pressed("ui_right")			Taste (nach rechts) wird gedrückt	
+
+#######################################################################################
+
+## Animationen ##		
+
+$AnimatedSprite.play()						Animation abspielen
+$AnimatedSprite.stop()						Animation stoppen
+
+$AnimatedSprite.flip_v						Animation vertikal spiegeln
+$AnimatedSprite.flip_h						Animation horizontal spiegeln
+
+

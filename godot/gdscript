@@ -3,8 +3,9 @@
 ## Grundlegende Anweisungen ##
 
 #								Linie Auskommentieren
-var «Variable» = 0				Variable definieren und Wert zuweisen
-func «Funktion» :				Funktionsaufruf
+var variable = 0				Variable definieren und Wert zuweisen
+export var variable				Variable im Inspektor einstellbar
+func FunctionName :				Funktionsaufruf (PascalCase)
 
 
 #######################################################################################
@@ -29,6 +30,7 @@ add_child(node)					Child-Node der Szene erstellen
 
 _process(delta)					Verarbeitung des Skripts, delta = Sync mit Bildrate
 _physics_process()				Steuerung von Charakter, Auto-Sync mit Spielphisik
+
 Node.set_process()				Ein- und Ausschalten
 
 #######################################################################################
@@ -61,9 +63,11 @@ func _methode():
 
 #######################################################################################
 
-## Klassen ##
+## Funktionen & Klassen ##
 
-extends NodeName				Code erweitert die Node-Klasse
+extends NodeName				Code erweitert die Node-Klasse (PascalCase)
+func FunktionName				Funktion definieren (PascalCase)
+_privateFelder					Private Felder, Lokale Variabeln und Parameter (camelCase)
 
 # Beispiel #
 -> Klasse deklarieren und Icon hinzufügen
