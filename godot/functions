@@ -1,20 +1,26 @@
-### GDScript Fucntion Cheatsheet ###
 
-## Node Funktionen ##
+### GDScript Function Cheatsheet ###
+
+## Node Funktionen (Objekte) ##
+
 .new()										Node erstellen
 .free()										Node löschen
 .queue_free()								Node im Ruhezustand sicher löschen
 
+.disabled									Node-Eigenschaft «Ausgeblendet» (true, false)
+.size 										Zählt die Anzahl Eigenschaften
+
 add_child("NodeName")						Child-Node hinzufügen
+show()										Objekt einblenden
+hide()										Objekt ausblenden
 
-#######################################################################################
-
-## Signale ##
-.connect("Signal", self, "Funktion")		Mit Signal verbinden
+randomize()									Zufallsgenerator
+randi() % n    								Zufällige Zahl zwischen 0 und n
 
 #######################################################################################
 
 ## Text & String Funktionen ##
+
 .text										Text ändern
 str()										Gibt String zurück
 
@@ -42,10 +48,15 @@ Input.is_action_pressed("ui_right")			Taste (nach rechts) wird gedrückt
 
 ## Animationen ##		
 
+$AnimatedSprite.animation 					Animation wählen
+
 $AnimatedSprite.play()						Animation abspielen
 $AnimatedSprite.stop()						Animation stoppen
 
 $AnimatedSprite.flip_v						Animation vertikal spiegeln
 $AnimatedSprite.flip_h						Animation horizontal spiegeln
+
+#######################################################################################
+
 
 

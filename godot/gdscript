@@ -1,3 +1,4 @@
+
 ### GDScript Basics Cheatsheet ###
 
 ## Grundlegende Anweisungen ##
@@ -39,6 +40,7 @@ Node.set_process()				Ein- und Ausschalten
 
 get_node("NodeName")			Node suchen
 $NodeName						Abgekürzte Variante
+
 get_nodes_in_group("GroupName")	Liste aller Nodes einer Gruppe abrufen
 get_tree()						Alle Elemente auf Szenen-Ebene abrufen
 add_to_group("GroupName")		Zu einer Gruppe hinzufügen

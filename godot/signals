@@ -1,0 +1,24 @@
+
+### GDScript Singals Cheatsheet ###
+
+## Signale erstellen & verbinden ##
+
+signal signalName							Benutzerdefiniertes inizieren
+emit_signal("signalName")					Signal aussenden
+
+.connect("Signal", self, "Funktion")		Mit Signal verbinden
+.set_deferred("disabled", true)				Verindern dass Signal nicht mehr als einmal ausgelöst wird
+
+#######################################################################################
+
+## Area2D Signale ##
+
+_on_Player_body_entered(body)				Spieler berühren sich
+
+#######################################################################################
+
+## VisibilityNotifier2D Signale ##
+
+_on_Visibility_screen_exited()				Objekt verlässt den Bildschirmbereich
+
+#######################################################################################
