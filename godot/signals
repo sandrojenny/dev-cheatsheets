@@ -13,12 +13,28 @@ emit_signal("signalName")					Signal aussenden
 
 ## Area2D Signale ##
 
-_on_Player_body_entered(body)				Spieler berühren sich
+_on_Player_hit(): 							Pattern (Node -> Player)
+-> _hit() 									Name des Benutzerdefinierten Signals (hit) 
+
+#######################################################################################
+
+## Area2D Signale ##
+
+_on_Player_body_entered(body):				Pattern (Node -> Player)
+_entered(body)								Spieler berühren sich
 
 #######################################################################################
 
 ## VisibilityNotifier2D Signale ##
 
-_on_Visibility_screen_exited()				Objekt verlässt den Bildschirmbereich
+_on_VisibilityNotifier2D_screen_exited(): 	Pattern (Node -> VisibilityNotifier2D)
+_screen_exited()							Objekt verlässt den Bildschirmbereich
+
+#######################################################################################
+
+## Timer Signale ##
+
+_on_Timer_timeout(): 						Pattern (Node -> Timer)
+_timeout() 									Timer abgelaufen
 
 #######################################################################################

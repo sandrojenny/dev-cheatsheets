@@ -1,18 +1,35 @@
 
 ### GDScript Function Cheatsheet ###
 
+## Pattern Functions ## 
+
+-> Klasse deklarieren und Icon hinzufügen
+
+class_Name KlassenName, "res://path/to/icon.svg"
+
+func _ready():
+	var this = KlassenName
+	var cppNode = InstanzDerKlasse.new()
+
+	cppNode.queue_free()
+
+#######################################################################################
+
 ## Node Funktionen (Objekte) ##
 
-.new()										Node erstellen
-.free()										Node löschen
-.queue_free()								Node im Ruhezustand sicher löschen
+Node.new()									Node erstellen
+Node.instance() 							Node-Instanz erstellen
+Node.free()									Node löschen
+Node.queue_free()							Node im Ruhezustand sicher löschen
 
-.disabled									Node-Eigenschaft «Ausgeblendet» (true, false)
-.size 										Zählt die Anzahl Eigenschaften
+Node.disabled								Node-Eigenschaft «Ausgeblendet» (true, false)
+Node.size 									Zählt die Anzahl Eigenschaften
 
 add_child("NodeName")						Child-Node hinzufügen
 show()										Objekt einblenden
 hide()										Objekt ausblenden
+stop() 										Stoppen
+play() 										Abspielen
 
 randomize()									Zufallsgenerator
 randi() % n    								Zufällige Zahl zwischen 0 und n
@@ -21,8 +38,10 @@ randi() % n    								Zufällige Zahl zwischen 0 und n
 
 ## Text & String Funktionen ##
 
-.text										Text ändern
+text										Text ändern
 str()										Gibt String zurück
+
+show_message(text)							Mitteilung anzeigen
 
 #######################################################################################
 
@@ -34,12 +53,20 @@ get_viewport_rect().size					Grösse des Spielfensters ermitteln
 
 ## Steuerung ##
 
+position									Position des Spielers
+start(position)	 							Starten(Position)
+
+set_offset(randi()) 						Position setzen (Zufällig)
+rotation									Ausrichtung setzen
+rand_range(-PI / 4, PI / 4)					Zufälliger Radius setzen
+deg2rad()									Grad in Radius konvertieren
+rad2deg() 									Radius in Grad konvertieren
+
 velocity									Geschwindkeit
 velocity.x									Horizontale Geschwindkeit
 velocity.y									Vertikale Geschwindkeit
 velocity.normalized()						Geschwindkeit normalisieren (x & y = 1)
 
-position									Position des Spielers
 clamp(position.x, 0, screen_size.x)			Verhindern, dass der Spieler den Bildschirm verlässt
 
 Input.is_action_pressed("ui_right")			Taste (nach rechts) wird gedrückt	
@@ -58,5 +85,10 @@ $AnimatedSprite.flip_h						Animation horizontal spiegeln
 
 #######################################################################################
 
+## Spielablauf ##	
 
+create_timer()								Verzögerung auslösen
+update_score(score)							Punktzahl updaten
+
+#######################################################################################
 

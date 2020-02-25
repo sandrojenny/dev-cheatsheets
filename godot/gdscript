@@ -3,85 +3,57 @@
 
 ## Grundlegende Anweisungen ##
 
-#								Linie Auskommentieren
-var variable = 0				Variable definieren und Wert zuweisen
-export var variable				Variable im Inspektor einstellbar
-func FunctionName :				Funktionsaufruf (PascalCase)
+#									Linie Auskommentieren
+var variable = 0					Variable definieren und Wert zuweisen
+export var variable					Variable im Inspektor einstellbar
+export (PackedScene) var variable 	Instanz im Inspektor auswählen
+func FunctionName :					Funktionsaufruf (PascalCase)
 
 
 #######################################################################################
 
 ## Szene ##
 
-_enter_tree()					Wenn ein Node einen Szenen-Tree betritt
-_ready()						Szene und alle Nodes ist geladen
-_exit_tree()					Wenn ein Node einen Szenen-Tree verlässt
-_init()							Konstruktor
+_enter_tree()						Wenn ein Node einen Szenen-Tree betritt
+_ready()							Szene und alle Nodes ist geladen
+_exit_tree()						Wenn ein Node einen Szenen-Tree verlässt
+_init()								Konstruktor
 
 ## Szene instanzieren ##
 
-load()							Szene laden
-preload()						Szene vorladen
-var node = scene.instance()		Instanz erstellen
-add_child(node)					Child-Node der Szene erstellen
+load()								Szene laden
+preload()							Szene vorladen
+var node = scene.instance()			Instanz erstellen
+add_child(node)						Child-Node der Szene erstellen
 
 #######################################################################################
 
 ## Prozesse ##
 
-_process(delta)					Verarbeitung des Skripts, delta = Sync mit Bildrate
-_physics_process()				Steuerung von Charakter, Auto-Sync mit Spielphisik
-
-Node.set_process()				Ein- und Ausschalten
+_process(delta)						Verarbeitung des Skripts, delta = Sync mit Bildrate
+_physics_process()					Steuerung von Charakter, Auto-Sync mit Spielphisik
+Node.set_process()					Ein- und Ausschalten
 
 #######################################################################################
 
 ## Nodes ##
 
-get_node("NodeName")			Node suchen
-$NodeName						Abgekürzte Variante
+get_node("NodeName")				Node suchen
+$NodeName							Abgekürzte Variante
 
-get_nodes_in_group("GroupName")	Liste aller Nodes einer Gruppe abrufen
-get_tree()						Alle Elemente auf Szenen-Ebene abrufen
-add_to_group("GroupName")		Zu einer Gruppe hinzufügen
-
-# Beispiel #
--> Funktion bei Mitgliedern (Gruppe) aufrufen
-
-get_tree().call_group("GroupName", "Funktion")
-
-#######################################################################################
-
-## Signale ##
-
-# Verbinden #
-func _ready():
-	$Node.connect("Signal", self, "_methode")
-
-# Anweisungen durchführen #
-func _methode():
-	// Code
+get_nodes_in_group("GroupName")		Liste aller Nodes einer Gruppe abrufen
+get_tree()							Alle Elemente auf Szenen-Ebene abrufen
+add_to_group("GroupName")			Zu einer Gruppe hinzufügen
 
 
 #######################################################################################
 
 ## Funktionen & Klassen ##
 
-extends NodeName				Code erweitert die Node-Klasse (PascalCase)
-func FunktionName				Funktion definieren (PascalCase)
-_privateFelder					Private Felder, Lokale Variabeln und Parameter (camelCase)
+extends NodeName					Code erweitert die Node-Klasse (PascalCase)
+func FunktionName					Funktion definieren (PascalCase)
+_privateFelder						Private Felder, Lokale Variabeln und Parameter (camelCase)
 
-# Beispiel #
--> Klasse deklarieren und Icon hinzufügen
-
-class_Name KlassenName, "res://path/to/icon.svg"
-
-func _ready():
-	var this = KlassenName
-	var cppNode = InstanzDerKlasse.new()
-
-	cppNode.queue_free()
-
-
+#######################################################################################
 
 
