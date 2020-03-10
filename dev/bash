@@ -2,7 +2,7 @@
 
 ## Table of Content ##
 => 1. main commands
-=> 2. helpers
+=> 2. helpers + wildcards
 => 3. content
 => 4. work with files + folders
 => 5. search + update
@@ -17,7 +17,7 @@
 => 14. Package Manager APT
 => 15. WebServer + Databases
 
-#main commands
+# 1. main commands
 ls							Show the content of a directory
 ls /						Show the content of a subdirectory
 ls --						Show all ls functions
@@ -36,7 +36,7 @@ cd folder/folder2			Change the directory by folders
 cd "folder test"			if a folder has a whitespace
 cd folder\ test				escaping if a folder has a whitespace (cmd + alt + /)
 
-#wildcards
+# 2. helpers + wildcards
 -a 							Show all (hidden) files
 -l 							Show list
 -la 						Show list with all (hidden) files
@@ -45,7 +45,6 @@ cd folder\ test				escaping if a folder has a whitespace (cmd + alt + /)
 -d 							list directory themselves, not their contents
 |							Pipe: Command is forwarded to another command
 
-#helpers
 pwd							Who i am? print absolut path
 man hier					show manual of the complete root directory
 man -k zip					list all manual that conatins «zip»
@@ -55,13 +54,13 @@ clear						clears the current session
 reset						resets the current session
 exit 						exit current state
 
-#content
+# 3. content
 cat text.txt							Show the content of the txt-file
 cat text.txt | more						Show first lines and continue with more command
 head text.txt 							Show only the first 10 lines of the txt-file
 tail text.txt 							Show only the last 10 lines of the txt-file
 
-#work with files & folders
+# 4. work with files & folders
 mkdir test-folder						Creates the folder «test-folder»
 touch test-document						Creates a new empty txt-file
 
@@ -91,7 +90,7 @@ tar cvfz archive.tar.gz test-folder		Packs the test-folder into an zipped archvi
 gzip text.txt 							Zip a single file
 gunzip text.gz							Unzip the Zip-File
 
-#Search & Update
+# 5. Search & Update
 du 									show folder an file size in byte
 du -ms 								show folder an file size in mega-byte
 du -ks								show folder an file size in kilo-byte
@@ -109,7 +108,7 @@ sudo find / 						Search the entire hard disk with admin rights
 sudo find / -atime 2				Search only for files changed in the last 2 days
 sudo updatedb						Update the database		
 
-#Filter & Analyze
+# 6. Filter & Analyze
 cd /var/log							Navigate to the logfiles folder
 ls -lat 							Show list with all (hidden) files by date
 cat syslog.1						Show the content of the syslog.1 file
@@ -119,18 +118,18 @@ cat syslog.1 | grep	term | sort		... Sort by date
 cat syslog.1 | grep	term | sort		... Sort by date in reverse order
 cat syslog.1 | grep	term | wc		... Count Words (lines, words, chars)
 
-#values
+# 7. values
 echo "Hello World"					Outputs the string
 echo $HOME							Shows the value of the home varibale
 echo $PATH 							Shows the value of the path variable
 man echo							shows manual of echo command
 
-#admin
+# 8. admin
 sudo								work with admin permissions
 sudo -s 							work permanetly with admin permissions
 -g 									work globally
 
-#Interfaces, SSH & SFTP
+# 9. Interfaces, SSH & SFTP
 ifconfig							Displays the status of the systems active interfaces
 ifconfig -a 						Display all interfaces
 ifconfig eth0						Display the configuration of the eth device
@@ -143,7 +142,7 @@ ssh -l <username> <IP>				Connect with bash to linux server
 bash								Starts bash
 sh 									Go back to simple shell
 
-#Ownership and access rights
+# 10. Ownership and access rights
 d-rw-rw-rwx										directory / owner / group / others
 l-rw-rw-rwx										link / owner / group / others
 b-rw-rw-rwx										block oriented device file / owner / group / others
@@ -171,7 +170,7 @@ chmod 555 										... read and exuecute persmissions
 chmod 666 										... read and write persmissions
 chmod 777 										... read, write and exuecute persmissions
 
-#User and group management
+# 11. User and group management
 sudo 						    				admin / root permissions
 suod -s 										work permanetly as root user
 sudo passwd unserName							Change password for a specific user		
@@ -191,7 +190,7 @@ addgroup newGroupname							Add a new group
 
 nano /etc/group 								Edit the config file for groupes
 
-#Operating system, processes and tools
+# 12. Operating system, processes and tools
 ps 													Show running processes
 ps -u 												Show running processes per user
 ps -ax 												Show all processes
@@ -223,20 +222,20 @@ MAILTO="maxmuster@gmail.com" 						Sends the output to a email adress
 ping www.google.com 								Check if a website (google) is available 
 ping -c 1											... ping only once
 
-#Shell Scripts
+# 13. Shell Scripts
 nano helloworld.sh 									Create a new shell script (#!/bin/bash)
 chmod +x helloworld.sh 								Gives the file the permissions to exuecute
 ./helloworld.sh 									Executes the script
 sudo mv helloworld.sh /bin 							Moves the script into the /bin folder (let you exuecute the file globally without specifying the path)
 
-#Package Manager APT
+# 14. Package Manager APT
 apt 												Show commands
 apt-cache search packageName						Search packages
 apt-get install packageName							Install package
 apt-get remove packageName							Deinstall package
 apt-get update 										Update all packages
 
-#WebServer & Databases
+# 15. WebServer & Databases
 $ sudo apt-cache search php
 $ sudo apt-cache search php-mysql
 $ sudo apt-get install php7.2 
