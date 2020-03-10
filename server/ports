@@ -1,0 +1,12 @@
+*** Port Cheatsheet ***
+
+## Basic Info ##
+/etc/ports.conf 	Linux Port Configuration
+
+## Ports ##
+.22				SSH
+.80				Standard Port
+.443			SSL Port
+.3306			MySQL
+
+All TCP Ports: https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers

@@ -233,7 +233,8 @@ apt 												Show commands
 apt-cache search packageName						Search packages
 apt-get install packageName							Install package
 apt-get remove packageName							Deinstall package
-apt-get update 										Update all packages
+apt-get update 										Search packages updates
+apt-get upgrade										Install all updates
 
 # 15. WebServer & Databases
 $ sudo apt-cache search php

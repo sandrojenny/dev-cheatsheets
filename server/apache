@@ -2,4 +2,18 @@
 
 Website: https://httpd.apache.org/
 
+## Install Apache ##
+sudo apt-get install apache2 							Install Apache 
+sudo apt-get install apache2 apache2-doc				Install Apache + Documentation
+sudo apt-get install lamp-server						Install Apache LAMP Package
 
+## Webserver Basic Commands ##
+cd /var/www/											Go to webserver directory
+sudo wget ServerAdressOfTheApplication 					Install a Application to the directory
+sudo wget https://wordpress.org/latest.tar.gz 			Install Wordpress (Example)
+sudo tar xvfz latest.tar.gz -C html/					Unzip the files to the html directory
+sudo chown www-data.www-data -R wordpress/ 				Set permissions to the user www-data and group www-data
+
+sudo service apache2 start  							Starts the Apache-Service via init-Script /etc/init.d/apache2
+sudo service apache2 stop 								Stop the apache2 service
+sudo service apache2 restart 							Restart the apache2 service
