@@ -1,0 +1,50 @@
+### Linux Cheatsheet ###
+
+## The directory structure ##
+
+/bin 			binaries (Befehle)
+/sbin 			sbin = System-Binaries / System Programs
+/dev 			Development files
+/boot 			Boot-Files / Bootloader
+
+/cdrom 			CD-Rom contents (if inserted)
+/media			USB sticks, external hard drives
+/mnt 			External media are created
+
+/etc 			Editable text configuration files, Cron-Jobs
+/home 			Directory for users
+/lib 			Libraries, Libraries for the operation of Linux
+/lib64
+
+/opt 			Manual installation of programs and configurations
+/proc 			Running processes, are always created anew at system start
+/run 			Information on current sessions
+
+/root 			Admin directory
+/srv 			Services & utilities
+/sys 			System Folder / Kernel Interfaces
+/tmp 			Temporary files
+/usr 			Libraries of installed programs of external developers
+/var 			Directories and files of programs such as Apache / Mail 
+/var/log 		Log files (protocols)
+
+
+## User & Groupes ##
+
+root			System Root Group (Admin Permissions)
+daemon			LLinux server & desktop services
+
+# Creating a new user and adding him to a group
+$ sudo adduser newUserName groupName
+
+# Delete user
+$ sudo deluser userName
+
+# Remove user from group
+$ sudo deluser userName groupName
+
+# Create a new group
+$ sudo addgroup newGroupName
+
+# Edit Group Config File
+$ sudo nano /etc/group

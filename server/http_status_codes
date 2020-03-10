@@ -1,0 +1,87 @@
+*** HTTP Status Codes Cheatsheet ***
+
+## Table of Content ##
+=> 1xx Information
+=> 2xx Successful operation
+=> 3xx Redirection
+=> 4xx Client errors
+=> 5xx Server errors
+
+## 1xx Information ##
+-> The processing of the request is still ongoing.
+100		Answer pending
+101		Switching the protocol (e.g. from HTTPs to WebSocket)
+102		time-consuming request is processed, avoiding a time out
+
+## 2xx Successful operation ##
+-> The request was successful, the answer can be used.
+200		Success
+201		Created, "Location" header field may contain the address of the created resource.
+202		Accepted, The request was accepted
+203		Accepted, Server replies with a modified document from the source
+204		Accepted, No Content
+205		Accepted, Content or Form-Request reset
+206		Accepted, Monitoring progress, e.g. download progress via Wget
+207		Accepted, XML-Document
+208		Accepted, WebDAV Connection
+226		Accepted, GET-Request
+
+## 3xx Redirection ##
+-> Redirection of the request via the "Location" header field
+300		Several types of forwarding available as a list
+301		Moved Permanently, The old address is no longer valid
+302		Moved Temporarily
+303		See Other, Follow GET-Request, even if the original request was a POST.
+304		Not Modified, Content unchanged since the last request and is therefore not transferred
+305		Use Proxy, Ressource only accessible via a proxy accessible
+306		Reserved, 306 is no longer used, but is reserved. 
+307		Temporary Redirect
+308		Permanent Redirect
+
+## 4xx Client errors ##
+-> The reason for the failure of the request is (rather) the responsibility of the client.
+400		Bad Request
+401		Unauthorized
+402		Payment Required
+403		Forbidden
+404		Not Found
+405		Method Not Allowed
+406		Not Acceptable
+407		Proxy Authentication Required
+408		Timeout
+409		Conflict
+410		Gone
+411		Length Required	/ „Content-Length“-Header
+412		Precondition Failed
+413		Request Entity Too Large
+414		URI Too Long
+415		Unsupported Media Type	
+416		Requested range not satisfiable
+417		Expectation Failed
+420		Policy Not Fulfilled
+421		Misdirected Request
+422		Upgradenprocessable Entity
+423		Locked
+424		Failed Dependency
+426		Upgrade Required => HTTPS
+428		Precondition Required
+429		Too Many Requests
+431		Request Header Fields Too Large	
+451		Unavailable For Legal Reason
+
+## 5xx Server errors ##
+-> The cause of the failure of the request is rather the responsibility of the server.
+500		Internal Server Error
+501		Unknown or unsupported HTTP method
+502		Bad Gateway, invalid response received
+503		Service Unavailable
+504		Timeout
+505		HTTP Version not supported
+506		Closed loop
+507		Insufficient Storage
+508		Loop Detected
+509		Bandwidth Limit Exceeded
+510		Request does not contain all information
+511		Network Authentication Required
+
+
