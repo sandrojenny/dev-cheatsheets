@@ -3,9 +3,11 @@
 Website: https://httpd.apache.org/
 
 ## Install Apache ##
-sudo apt-get install apache2 							Install Apache 
+sudo apt-get install apache2							Install Apache 
 sudo apt-get install apache2 apache2-doc				Install Apache + Documentation
 sudo apt-get install lamp-server						Install Apache LAMP Package
+sudo apache2 -v 										Check Version of Apache2
+sudo apachectl -v 										Check Version of preinstalled Apache on Mac OS
 
 ## Webserver Basic Commands ##
 cd /var/www/											Go to webserver directory
@@ -17,3 +19,21 @@ sudo chown www-data.www-data -R wordpress/ 				Set permissions to the user www-d
 sudo service apache2 start  							Starts the Apache-Service via init-Script /etc/init.d/apache2
 sudo service apache2 stop 								Stop the apache2 service
 sudo service apache2 restart 							Restart the apache2 service
+
+## Server Config File ##
+/etc/apache2/										 	Apache Config File-Directory
+/etc/apache2/users									 	Apache Config File-Directory
+/etc/apache2/users/username.conf					 	Apache User-Config File
+
+# Directory Config Directives (.conf) #
+<Directory "/Users/username/Folder/"> 					Opening tag with Directory
+</Directory> 											Closing tag
+
+Options   												Config File includes configuration instructions
+Indexes         										Indexes can be displayed if no index.html is available
+MultiViews 								 				Apache should make suggestions if pages do not exist
+
+# Config Rules #
+AllowOverride None 										Local Config-Files cannot act beyond the directory
+Order allow,deny 										Order in which rules are followed
+Allow from all 											Directory is accessible from the outside
