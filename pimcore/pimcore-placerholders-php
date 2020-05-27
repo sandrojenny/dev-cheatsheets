@@ -1,0 +1,8 @@
+pimcore-placerholders php
+
+https://pimcore.com/docs/6.x/Development_Documentation/Documents/Editables/index.html
+
+
+# Relations
+$this->relation('product') 					Placeholder to make 1 to 1 relations
+

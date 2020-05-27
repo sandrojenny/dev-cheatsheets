@@ -16,6 +16,7 @@
 => 13. Shell scripts
 => 14. Package Manager APT
 => 15. WebServer + Databases
+=> 16. Links + Sources
 
 # 1. main commands
 ls							Show the content of a directory
@@ -46,6 +47,7 @@ cd folder\ test				escaping if a folder has a whitespace (cmd + alt + /)
 |							Pipe: Command is forwarded to another command
 
 pwd							Who i am? print absolut path
+which firefox				Who is the app installed?
 man hier					show manual of the complete root directory
 man -k zip					list all manual that conatins «zip»
 ls --help 					shos a help-file for the command «ls»
@@ -62,6 +64,7 @@ tail text.txt 							Show only the last 10 lines of the txt-file
 
 # 4. work with files & folders
 mkdir test-folder						Creates the folder «test-folder»
+mkdir test-folder -p					Overwrite the folder if it exists already	
 touch test-document						Creates a new empty txt-file
 
 rmdir test-folder						Deletes the folder «test-folder» (works only with empty folders)
@@ -120,6 +123,8 @@ cat syslog.1 | grep	term | wc		... Count Words (lines, words, chars)
 
 # 7. values
 echo "Hello World"					Outputs the string
+echo "Hello World" > text.txt 		Writes the Value in the File (Overwrites the Text)
+echo "Hello World" >> text.txt 		Writes the Value in the File on a new Line
 echo $HOME							Shows the value of the home varibale
 echo $PATH 							Shows the value of the path variable
 man echo							shows manual of echo command
@@ -261,4 +266,7 @@ sudo chown www-data.www-data -R wordpress/ 							Set permissions to the user ww
 
 sudo service apache2 restart 										Restart the apache2 service
 
+
+# 16. Links & Sources
+Linux Shell Commands: https://docs.cs.cf.ac.uk/notes/linux-shell-commands/
 

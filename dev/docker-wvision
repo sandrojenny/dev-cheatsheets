@@ -1,4 +1,4 @@
-*** Docker Cheatsheet ***
+*** Docker Cheatsheet w-vision ***
 
 Website: https://docs.docker.com
 
@@ -9,6 +9,9 @@ Website: https://docs.docker.com
 docker login 
  => username ( sandrojenny )
  => pw ( WNj^7ae9yp )
+
+# Pimcore Apache Envoriment
+docker ps 											Shows running procesess and Local Ports
 
 # Docker Service neu staren
 exit

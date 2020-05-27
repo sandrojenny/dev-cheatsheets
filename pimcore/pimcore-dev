@@ -3,13 +3,48 @@
 Doc: https://pimcore.com/docs/5.x/index.html
 
 ## Table of Content ##
-=> 1. Layouts & Templates
+=> 1. Documents & Templates
 => 2. Assets & Thumbnails
-=> 3. ...
+=> 3. 
 
 ## Layouts & Templates
-$this->extend('layout.html.php');			 wrap our content page with another template 
 
+/src/AppBundle/controllers/ContentController.php							The controllers directory (symfony naming convention)
+/app/Resources/views/[Controller]/[action].html.php 						The view (template) directory (symfony naming convention)
+/** @var \Pimcore\Model\DataObject\Product $product */  					add @var PHPDoc in every view, to benefit from auto-complete in your IDE
+
+# Controller
+class DefaultController extends FrontendController 							Controller Class
+public function homeAction(Request $request) 								Controller Function (Pimcore Action)
+public function differentAction() 											Controller Function (Second Pimcore Action)
+public function jsonAction(Request $request)								Controller Function / Json Response
+
+return $this->render(":Default:somethingelse.html.php", ["foo" => "bar"]);	Using a different template than the name of the action
+return $this->json(array('key' => 'value'));								Returns a Json Response
+return new Response("Just some text");										Returns a standard symfony Response object
+
+@ResponseHeader("X-Foo", values={"123456", "98765"})						add response headers to defaultAction of the frontendController
+$this->addResponseHeader('X-Foo', 'bar', false, $request); 					schedule a response header via code
+
+# Controller Properties
+$this->view->foo = 'bar';									Set a view variable with the name "foo" and the value "bar" (Type: ViewModel)
+$this->document 											Reference to the current document, if any is available. (Type: Document)
+$this->editmode 											Boolean: True if you are in editmode (admin)
+
+# View (PHP)
+$this->extend('layout.html.php');							Wrap our content page with another template
+$this->input("headline", ["width" => 540]); 				Input placeholder (editable part)
+$this->block("contentblock") 								Block placeholder (editable part)
+$this->wysiwyg("content") 									Wysiwyg placeholder (editable part)
+=> For more view pimcore-placerholders sheet 				PHP or Twig
+
+$this->slots()->output('_content') 							placeholder where the content of the page will be inserted
+$this->block("contentblock")->loop() 						Placeholder for the while loop
+
+# Getter Methods
+$product = $this->relation('product')->getElement(); 		Access to the entire data from the linked object (name, description, ...)
+$product->getName() 												
+$product->getDescription()
 
 ## Assets & Thumbnails
 Doc: https://pimcore.com/docs/5.x/Development_Documentation/Assets/Working_with_PHP_API.html 
@@ -34,5 +69,9 @@ $asset->save();
 # Delete existing Asset
 $asset = Asset::getById(75);
 $asset->delete();
+
+# Get Thumbnail
+$asset->getThumbnail('thubnailname');
+$asset->getThumbnail('thubnailname')->getHTML(); 
 
 

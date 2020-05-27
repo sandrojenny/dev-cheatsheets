@@ -1,0 +1,28 @@
+*** Docker Cheatsheet homebrew ***
+
+First intsall homebrew -> https://brew.sh/
+
+# Installing docker
+brew cask install docker
+
+# LogIn
+docker login 
+ => username ( sandrojenny )
+ => pw ( WNj^7ae9yp )
+
+# Search & install
+docker search nginx						Search images in docker registry
+docker search -s10 nginx  				Show only the first 10 images
+docker pull nginx 						Load image from docker registry to local repository
+docker images							Show local images
+
+# Run docker container
+docker run nginx						Run local repository (nginx-Server)
+docker run -p 8080:80 nginx 			Run local repo on Port localhost:8080
+docker ps 								Show running docker processes (Container)
+docker stop {Container ID}				Stop docker container
+
+#Remove container & images
+docker rm {Container ID} 				Remove docker container
+docker image rm {Image ID}  		Remove docker images
+docker image rm {Image ID} -f  		Force Removing
