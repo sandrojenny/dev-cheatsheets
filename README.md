@@ -1,18 +1,11 @@
 ### WebDev Cheatsheet ###
 
-## Linux/Bash Cheatsheet – Table of Content ##
-=> 1. main commands
-=> 2. helpers
-=> 3. content
-=> 4. work with files + folders
-=> 5. search + update
-=> 6. filter + analyze
-=> 7. values
-=> 8. admin
-=> 9. Interfaces, SSH + SFTP
-=> 10. Ownership and access rights
-=> 11. User and group management
-=> 12. Operating system, processes and tools
-=> 13. Shell scripts
-=> 14. Package Manager APT
-=> 15. WebServer & Databases
+## Table of Content ##
+.. /dev
+.. /backend_mvc
+.. /frontend
+.. /databases
+.. /pimcore
+.. /godot
+.. /server
+.. /tools
